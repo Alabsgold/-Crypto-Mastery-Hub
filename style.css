@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +7,7 @@ body {
     text-align: center;
 }
 
+/* Header Styling */
 header {
     background: #333;
     color: white;
@@ -25,13 +27,66 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/crypto-bg.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #ffcc00;
+    color: #333;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background: #ff9900;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.feature-box {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.feature-box h3 {
+    font-size: 22px;
+}
+
+/* Footer */
 footer {
     background: #222;
     color: white;
     padding: 10px;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
