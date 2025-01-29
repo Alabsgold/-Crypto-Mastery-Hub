@@ -302,3 +302,8 @@ contactForm.addEventListener('submit', function(event) {
         formFeedback.style.color = 'red';
     }
 });
+// Mobile Menu Toggle
+function toggleMenu() {
+    const navList = document.querySelector("nav ul");
+    navList.classList.toggle("active");
+}
