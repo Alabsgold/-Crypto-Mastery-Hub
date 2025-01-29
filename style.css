@@ -103,3 +103,41 @@ footer {
 .dark-mode nav ul li a {
     color: #ffcc00;
 }
+/* Newsletter Section */
+.newsletter {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.newsletter h2 {
+    margin-bottom: 10px;
+}
+
+.newsletter input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 15px;
+    background: #ffcc00;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.newsletter button:hover {
+    background: #e6b800;
+}
+
+#message {
+    margin-top: 10px;
+    color: green;
+}

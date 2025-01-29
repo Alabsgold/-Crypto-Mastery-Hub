@@ -32,3 +32,32 @@ const fetchCryptoPrices = async () => {
 // Fetch prices every 30 seconds
 fetchCryptoPrices();
 setInterval(fetchCryptoPrices, 30000);
+// Handle Newsletter Subscription
+document.getElementById("newsletter-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message");
+
+    if (!email.includes("@")) {
+        message.textContent = "Please enter a valid email address.";
+        message.style.color = "red";
+        return;
+    }
+
+    try {
+        // Simulate sending email to a database
+        message.textContent = "Subscribing...";
+        message.style.color = "blue";
+
+        await new Promise(resolve => setTimeout(resolve, 1500)); // Fake delay
+
+        message.textContent = "You're subscribed! Check your email for updates.";
+        message.style.color = "green";
+
+        document.getElementById("newsletter-form").reset();
+    } catch (error) {
+        message.textContent = "Subscription failed. Try again later.";
+        message.style.color = "red";
+    }
+});
