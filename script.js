@@ -238,3 +238,43 @@ if (glossaryContainer) {
         glossaryContainer.appendChild(glossaryItem);
     });
 }
+// Sample FAQ Data
+const faqItems = [
+    {
+        question: "What is cryptocurrency?",
+        answer: "Cryptocurrency is a type of digital currency that uses cryptography for security and operates on decentralized networks, like blockchain."
+    },
+    {
+        question: "How do I buy cryptocurrency?",
+        answer: "You can buy cryptocurrency through exchanges like Coinbase, Binance, or Kraken. You'll need to create an account, link your payment method, and then place an order."
+    },
+    {
+        question: "Is cryptocurrency safe?",
+        answer: "While cryptocurrency offers enhanced security compared to traditional currencies, it's important to take extra steps to protect your assets, such as using a secure wallet and enabling two-factor authentication."
+    },
+    {
+        question: "What is a cryptocurrency wallet?",
+        answer: "A cryptocurrency wallet is a software or hardware tool that allows you to store and manage your crypto assets. Wallets can be hot (online) or cold (offline)."
+    },
+    {
+        question: "What is blockchain technology?",
+        answer: "Blockchain is a distributed ledger technology that records transactions in a decentralized way, ensuring transparency and security."
+    }
+];
+
+// Load FAQ Items Dynamically
+const faqContainer = document.getElementById("faq-container");
+
+if (faqContainer) {
+    faqItems.forEach(item => {
+        const faqItem = document.createElement("div");
+        faqItem.classList.add("faq-item");
+
+        faqItem.innerHTML = `
+            <h3>${item.question}</h3>
+            <p>${item.answer}</p>
+        `;
+
+        faqContainer.appendChild(faqItem);
+    });
+}
