@@ -97,3 +97,39 @@ if (blogContainer) {
         blogContainer.appendChild(postElement);
     });
 }
+// Search Function for Blog Posts
+function searchBlog() {
+    const query = document.getElementById("search-input").value.toLowerCase();
+    const blogContainer = document.getElementById("blog-container");
+    const searchMessage = document.getElementById("search-message");
+
+    if (!query) {
+        searchMessage.textContent = "Please enter a search term.";
+        return;
+    }
+
+    searchMessage.textContent = "";
+
+    let found = false;
+    blogContainer.innerHTML = ""; // Clear previous results
+
+    blogPosts.forEach(post => {
+        if (post.title.toLowerCase().includes(query) || post.content.toLowerCase().includes(query)) {
+            const postElement = document.createElement("div");
+            postElement.classList.add("blog-post");
+
+            postElement.innerHTML = `
+                <h3>${post.title}</h3>
+                <p>${post.content}</p>
+                <a href="${post.link}">Read More</a>
+            `;
+
+            blogContainer.appendChild(postElement);
+            found = true;
+        }
+    });
+
+    if (!found) {
+        searchMessage.textContent = "No matching results found.";
+    }
+}
