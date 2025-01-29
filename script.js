@@ -198,3 +198,43 @@ async function fetchCryptoPrices() {
 
 // Load prices when the page loads
 fetchCryptoPrices();
+// Sample Glossary Data
+const glossaryTerms = [
+    {
+        term: "Bitcoin",
+        definition: "Bitcoin is a decentralized digital currency that operates without a central bank or administrator."
+    },
+    {
+        term: "Blockchain",
+        definition: "A blockchain is a distributed ledger technology that records transactions across many computers in a secure and transparent manner."
+    },
+    {
+        term: "Wallet",
+        definition: "A wallet is a software or hardware tool used to store and manage cryptocurrencies."
+    },
+    {
+        term: "Altcoin",
+        definition: "Any cryptocurrency other than Bitcoin, often used to refer to alternative coins like Ethereum or Litecoin."
+    },
+    {
+        term: "Token",
+        definition: "A token is a digital asset built on top of a blockchain, often representing assets like currency or equity."
+    }
+];
+
+// Load Glossary Terms Dynamically
+const glossaryContainer = document.getElementById("glossary-container");
+
+if (glossaryContainer) {
+    glossaryTerms.forEach(item => {
+        const glossaryItem = document.createElement("div");
+        glossaryItem.classList.add("glossary-item");
+
+        glossaryItem.innerHTML = `
+            <h3>${item.term}</h3>
+            <p>${item.definition}</p>
+        `;
+
+        glossaryContainer.appendChild(glossaryItem);
+    });
+}
