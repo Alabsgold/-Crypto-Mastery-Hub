@@ -278,3 +278,27 @@ if (faqContainer) {
         faqContainer.appendChild(faqItem);
     });
 }
+// Handle Contact Form Submission
+const contactForm = document.getElementById('contact-form');
+const formFeedback = document.getElementById('form-feedback');
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Simple validation (make sure fields are not empty)
+    if (name && email && message) {
+        // Simulate successful form submission (in a real project, you'd send the form data to a server)
+        formFeedback.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
+        formFeedback.style.color = 'green';
+
+        // Clear the form
+        contactForm.reset();
+    } else {
+        formFeedback.textContent = "Please fill in all fields before submitting.";
+        formFeedback.style.color = 'red';
+    }
+});
