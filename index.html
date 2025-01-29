@@ -8,6 +8,8 @@
 </head>
 <body>
     <header>
+        <button id="dark-mode-toggle">Dark Mode</button>
+
         <h1>Crypto Mastery Hub</h1>
         <p>Your ultimate guide to mastering cryptocurrency.</p>
         <nav>
@@ -21,7 +23,7 @@
     </header>
 
     <section class="hero">
-        <h2>Start Your Crypto Journey Today!</h2>
+        <h2 id="welcome-message"></h2>
         <p>Learn how to trade, invest, and secure your assets in the crypto world.</p>
         <a href="pages/guide.html" class="cta-button">Get Started</a>
     </section>
@@ -39,10 +41,26 @@
             <h3>Stay Secure</h3>
             <p>Protect your assets from scams and security threats.</p>
         </div>
+        <h2>Live Cryptocurrency Prices</h2>
+        <table>
+            <tr>
+                <th>Coin</th>
+                <th>Price (USD)</th>
+            </tr>
+            <tr>
+                <td>Bitcoin (BTC)</td>
+                <td id="btc-price">Loading...</td>
+            </tr>
+            <tr>
+                <td>Ethereum (ETH)</td>
+                <td id="eth-price">Loading...</td>
+            </tr>
+        </table>
     </section>
 
     <footer>
         <p>&copy; 2025 Crypto Mastery Hub | All Rights Reserved</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
