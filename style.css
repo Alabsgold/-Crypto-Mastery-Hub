@@ -211,3 +211,35 @@ footer {
     color: red;
     margin-top: 10px;
 }
+/* Crypto News Section */
+.crypto-news {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.crypto-news h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item a {
+    font-weight: bold;
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}

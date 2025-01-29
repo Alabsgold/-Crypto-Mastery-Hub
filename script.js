@@ -133,3 +133,32 @@ function searchBlog() {
         searchMessage.textContent = "No matching results found.";
     }
 }
+// Fetch Trending Crypto News
+async function fetchCryptoNews() {
+    const newsContainer = document.getElementById("news-container");
+
+    try {
+        const response = await fetch("https://api.coingecko.com/api/v3/news");
+        const data = await response.json();
+
+        newsContainer.innerHTML = ""; // Clear previous content
+
+        data.news.slice(0, 5).forEach(article => {
+            const newsItem = document.createElement("div");
+            newsItem.classList.add("news-item");
+
+            newsItem.innerHTML = `
+                <a href="${article.url}" target="_blank">${article.title}</a>
+                <p>${article.description}</p>
+            `;
+
+            newsContainer.appendChild(newsItem);
+        });
+
+    } catch (error) {
+        newsContainer.innerHTML = "<p>Failed to load news. Try again later.</p>";
+    }
+}
+
+// Load news when the page loads
+fetchCryptoNews();
