@@ -1,10 +1,3 @@
-// Dark Mode Toggle
-const toggleButton = document.getElementById("dark-mode-toggle");
-const body = document.body;
-
-toggleButton.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-});
 // Dynamic Welcome Message
 const welcomeMessage = document.getElementById("welcome-message");
 

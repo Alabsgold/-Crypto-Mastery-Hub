@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(rgb(25, 4, 78),rgb(78, 185, 29));
     text-align: center;
 }
 
@@ -38,7 +38,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     background: url('images/crypto-bg.jpg') no-repeat center center/cover;
-    color: white;
+    color: rgba(241, 241, 241, 0.938);
     padding: 100px 20px;
 }
 
@@ -48,7 +48,7 @@ nav ul li a:hover {
 
 .cta-button {
     display: inline-block;
-    background: #ffcc00;
+    background: #1900ff;
     color: #333;
     padding: 15px 25px;
     text-decoration: none;
@@ -58,7 +58,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background: #ff9900;
+    background: #5c85c4;
 }
 
 /* Features Section */
