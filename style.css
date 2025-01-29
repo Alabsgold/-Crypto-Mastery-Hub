@@ -89,21 +89,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
-/* Dark Mode Styles */
-.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
-.dark-mode header {
-    background: #222;
-}
-
-.dark-mode nav ul li a {
-    color: #ffcc00;
-}
-/* Newsletter Section */
+}/* Newsletter Section */
 .newsletter {
     text-align: center;
     padding: 30px;
