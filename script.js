@@ -61,3 +61,39 @@ document.getElementById("newsletter-form").addEventListener("submit", async (eve
         message.style.color = "red";
     }
 });
+// Sample Blog Data
+const blogPosts = [
+    {
+        title: "How to Buy Your First Cryptocurrency",
+        content: "Learn the step-by-step process of buying your first Bitcoin or Ethereum.",
+        link: "blog-post-1.html"
+    },
+    {
+        title: "Understanding Crypto Wallets",
+        content: "A detailed guide on hot and cold wallets, and how to keep your assets safe.",
+        link: "blog-post-2.html"
+    },
+    {
+        title: "Top 5 Mistakes Beginners Make in Crypto",
+        content: "Avoid common mistakes and start your crypto journey the right way.",
+        link: "blog-post-3.html"
+    }
+];
+
+// Load Blog Posts Dynamically
+const blogContainer = document.getElementById("blog-container");
+
+if (blogContainer) {
+    blogPosts.forEach(post => {
+        const postElement = document.createElement("div");
+        postElement.classList.add("blog-post");
+
+        postElement.innerHTML = `
+            <h3>${post.title}</h3>
+            <p>${post.content}</p>
+            <a href="${post.link}">Read More</a>
+        `;
+
+        blogContainer.appendChild(postElement);
+    });
+}
