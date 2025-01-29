@@ -243,3 +243,32 @@ footer {
 .news-item a:hover {
     text-decoration: underline;
 }
+/* Crypto Price Tracker Section */
+.crypto-price-tracker {
+    padding: 30px;
+    background: #f8f9fa;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.crypto-price-tracker h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.price-item:last-child {
+    border-bottom: none;
+}
+
+.price-item .price {
+    color: green;
+    font-weight: bold;
+}

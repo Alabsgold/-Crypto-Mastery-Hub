@@ -162,3 +162,39 @@ async function fetchCryptoNews() {
 
 // Load news when the page loads
 fetchCryptoNews();
+// Fetch Live Crypto Prices
+async function fetchCryptoPrices() {
+    const priceContainer = document.getElementById("price-container");
+
+    try {
+        const response = await fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,ripple,litecoin&vs_currencies=usd");
+        const data = await response.json();
+
+        priceContainer.innerHTML = ""; // Clear previous content
+
+        const coins = [
+            { name: "Bitcoin", symbol: "BTC", price: data.bitcoin.usd },
+            { name: "Ethereum", symbol: "ETH", price: data.ethereum.usd },
+            { name: "Ripple", symbol: "XRP", price: data.ripple.usd },
+            { name: "Litecoin", symbol: "LTC", price: data.litecoin.usd }
+        ];
+
+        coins.forEach(coin => {
+            const priceItem = document.createElement("div");
+            priceItem.classList.add("price-item");
+
+            priceItem.innerHTML = `
+                <div class="coin-name">${coin.name} (${coin.symbol})</div>
+                <div class="price">$${coin.price}</div>
+            `;
+
+            priceContainer.appendChild(priceItem);
+        });
+
+    } catch (error) {
+        priceContainer.innerHTML = "<p>Failed to load prices. Try again later.</p>";
+    }
+}
+
+// Load prices when the page loads
+fetchCryptoPrices();
